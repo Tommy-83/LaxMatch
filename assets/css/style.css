@@ -9,8 +9,11 @@
     display: flex;
     align-items: center;
     justify-content: center;
-    background: #060AB2;
+    background: #06b2b2;
   }
+
+  
+
   
   .game {
     width: 440px;
@@ -21,10 +24,11 @@
   }
 
   .card {
-    width: calc(25% - 10px);
-    height: calc(33.333% - 10px);
+    width: calc(24%);
+    height: calc(30%);
     margin: 1px;
     position: relative;
+    opacity: 0.9;
     
   }
   
