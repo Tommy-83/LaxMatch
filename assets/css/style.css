@@ -21,6 +21,7 @@
     margin: auto;
     display: flex;
     flex-wrap: wrap;
+    perspective: 1000px;
   }
 
   .card {
@@ -29,7 +30,9 @@
     margin: 1px;
     position: relative;
     opacity: 0.9;
-    
+    transform: scale(1);
+    transform-style: preserve-3d;
+    transition: transform .5s;
   }
   
   .front-face,
@@ -40,4 +43,8 @@
     position: absolute;
     border-radius: 5px;
     background: #656668;
+  }
+
+  .card.flip {
+    transform: rotateY(180deg);
   }
