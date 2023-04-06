@@ -1,6 +1,6 @@
 * {
-  padding: 0;
-  margin: 0;
+  padding:0;
+  margin:0;
   box-sizing: border-box;
   
 }
@@ -13,9 +13,35 @@ body {
   background: #12bddb;
 }
 
+
+.column {
+  float: left;
+  width: 50%;
+  padding:30px;
+  position:relative;
+
+}
+
+
+.row:after {
+  content: "";
+  display: table;
+  clear: both;
+}
+
+.game-name {
+  color: white;
+  font-weight: 300;
+  font-size: 20px;
+  text-align: center;
+  margin-left: 120px;
+  margin-right: 120px;
+
+}
+
 .game {
-  width: 440px;
-  height: 440px;
+  width: 500px;
+  height: 500px;
   margin: auto;
   display: flex;
   flex-wrap: wrap;
@@ -26,16 +52,16 @@ body {
   width: calc(25% - 10px);
   height: calc(33.333% - 10px);
   margin: 5px;
-  position: relative;
   transform: scale(1);
   transform-style: preserve-3d;
   transition: transform .5s;
+  
 
 
 }
 
 .card:active {
-  transform: scale(0.97);
+  transform: scale(1);
   transition: transform .2s;
 }
 
@@ -46,13 +72,19 @@ body {
 .front-face,
 .back-face {
   position: absolute;
-  width: 100%;
-  height: 100%;
+  width: 90%;
+  height: 90%;
   backface-visibility: hidden;
 }
 
 .front-face {
   transform: rotateY(180deg);
+}
+
+@media screen and (max-width: 600px) {
+  .column {
+    width: 100%;
+  }
 }
 
 
